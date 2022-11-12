@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplication.cadastrobugs.CadastroBugsController">
+    <children>
+        <BorderPane prefHeight="500.0" prefWidth="600.0">
+            <bottom>
+                <VBox prefHeight="77.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="576.0" spacing="40.0">
+                            <children>
+                                <Label text="Deseja receber atualizaçoes sobre o bug?" />
+                                <RadioButton mnemonicParsing="false" text="Sim" />
+                                <RadioButton mnemonicParsing="false" text="Nao" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="574.0" spacing="10.0">
+                            <children>
+                                <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#handleBtnClose" text="Close">
+                                    <HBox.margin>
+                                        <Insets right="380.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="buttonOk" mnemonicParsing="false" onAction="#handleBtnOk" text="OK" />
+                                <Button fx:id="buttonLimpar" mnemonicParsing="false" onAction="#handleBtnLimpar" text="Limpar" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </bottom>
+            <center>
+                <VBox layoutY="-10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="453.0" spacing="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="name" maxWidth="-Infinity" prefHeight="25.0" prefWidth="450.0" />
+                        <TextField fx:id="mail" maxWidth="-Infinity" prefHeight="25.0" prefWidth="450.0" />
+                        <HBox alignment="BASELINE_LEFT" prefHeight="26.0" prefWidth="453.0" spacing="200.0">
+                            <children>
+                                <ComboBox prefHeight="25.0" prefWidth="150.0" value="Window">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Windows" />
+                                            <String fx:value="Linux" />
+                                            <String fx:value="Mac" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <Label contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" text="Prioridade" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="BASELINE_LEFT" prefHeight="26.0" prefWidth="453.0" spacing="10.0">
+                            <children>
+                                <TextField fx:id="titulo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="289.0" />
+                                <ComboBox prefHeight="25.0" prefWidth="150.0" value="Normal">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Low" />
+                                            <String fx:value="Normal" />
+                                            <String fx:value="High" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                            </children>
+                        </HBox>
+                        <TextArea fx:id="descricao" layoutX="-10.0" layoutY="-5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="450.0">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </TextArea>
+                    </children>
+                </VBox>
+            </center>
+            <left>
+                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="258.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="RIGHT_TO_LEFT" text="Nome" />
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Email" />
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Sistema" />
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Titulo" />
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Descriçao" />
+                    </children>
+                </VBox>
+            </left>
+            <top>
+                <Label lineSpacing="10.0" text="Cadastro de Bugs" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="27.0" />
+                    </font>
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+                </Label>
+            </top>
+        </BorderPane>
+    </children>
+</Pane>
